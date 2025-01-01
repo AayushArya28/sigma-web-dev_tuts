@@ -6,59 +6,15 @@ console.log("For Subtract : 2")
 console.log("For Multiple : 3")
 console.log("For Division : 4")
 
-function calc(a,b,op){
-    let result = 0;
-    switch(op){
-        case 1:
-            result = a+b;
-            console.log("Addition : ",result);
-            break;
-        case 2:
-            result = a-b;
-            console.log("Subtract : ",result);
-            break;
-        case 3:
-            result = a*b;
-            console.log("Multiple : ",result);
-            break;
-        case 4:
-            result = a/b;
-            console.log("Division : ",result);
-            break;
-        default:
-            console.log("Invalid Operation");
-    }
-}
-
-function faultycalc(a,b,op){
-    let result = 0;
-    switch(op){
-        case 1:
-            result = a-b;
-            console.log("Addition : ",result);
-            break;
-        case 2:
-            result = a/b;
-            console.log("Subtract : ",result);
-            break;
-        case 3:
-            result = a+b;
-            console.log("Multiple : ",result);
-            break;
-        case 4:
-            result = Math.pow(a,b);
-            console.log("Division : ",result);
-            break;
-        default:
-            console.log("Invalid Operation");
-    }
-}
-
-let a = 10;
-let b = 5;
-let op = 1;
-
 let pro = Math.random();
+console.log("Random:",pro);
+
+
+let a = parseInt(prompt("Enter First Number : "));
+let b =  parseInt(prompt("Enter Second Number : "));
+let op =  parseInt(prompt("Enter Operation : "));
+
+
 if (pro < 0.1) {
     console.log(`Numbers are : ${a}, ${b}`);
     faultycalc(a,b,op);
@@ -66,4 +22,41 @@ if (pro < 0.1) {
 else{
     console.log(`Numbers are : ${a}, ${b}`);
     calc(a,b,op);
+}
+
+function calc(a,b,op){
+    if (op == 1) {
+        console.log("Addition is : ",  a+b);
+    }
+    else if (op == 2) {
+        console.log("Subtraction is : ", a-b);
+    }
+    else if (op == 3) {
+        console.log("Multiplication is : ", a*b);
+    }
+    else if (op == 4) {
+        console.log("Division is : ", a/b);
+    }
+    else{
+        console.log("Invalid Operation");
+    }
+}
+
+
+function faultycalc(a,b,op){
+    if (op == 1) {
+        console.log("Addition is : ", a-b);
+    }
+    else if (op == 2) {
+        console.log("Subtraction is : ", a/b);
+    }
+    else if (op == 3) {
+        console.log("Multiplication is : ", a+b);
+    }
+    else if (op == 4) {
+        console.log("Division is : ", Math.pow(a,b));
+    }
+    else{
+        console.log("Invalid Operation");
+    }
 }
