@@ -9,11 +9,9 @@ console.log("For Division : 4")
 let pro = Math.random();
 console.log("Random:",pro);
 
-
 let a = parseInt(prompt("Enter First Number : "));
 let b =  parseInt(prompt("Enter Second Number : "));
 let op =  parseInt(prompt("Enter Operation : "));
-
 
 if (pro < 0.1) {
     console.log(`Numbers are : ${a}, ${b}`);
@@ -41,7 +39,6 @@ function calc(a,b,op){
         console.log("Invalid Operation");
     }
 }
-
 
 function faultycalc(a,b,op){
     if (op == 1) {
