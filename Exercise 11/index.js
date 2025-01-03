@@ -16,4 +16,12 @@ for (let index = 1; index <= no; index++) {
 const fact = (a,b)=>{
     return a*b
 }
-console.log("Factorial of", no, "is using", arr.reduce(fact));
+console.log("Factorial of", no, "is using reduce method is: ", arr.reduce(fact));
+
+//Additional method using reduce funtion but not working
+// let arrN = Array.from(Array(no+1).keys())
+// console.log(arrN);
+// //Array(no+1).keys()-->   this part gives an array of 0 to n number
+// let c = arrN.slice(1,).reduce((a,b)=>{ 
+//     return a*b})
+// console.log("Factorial of", no, "is using Additional Reduce method is:", arr.reduce(fact));
